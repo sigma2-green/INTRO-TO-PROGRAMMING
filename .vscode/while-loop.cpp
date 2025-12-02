@@ -1,0 +1,28 @@
+// While Loop Example in C++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+
+    string food;
+    char resp;
+
+    cout<< "Please enter a food you like: ";
+    getline(cin, food);
+    cout << "Do you wish to continue (Y/N)? ";
+    cin >> resp;
+
+    while(resp != 'N' && resp != 'n')
+    {
+        cout<< "You like  " << food << "." << endl;
+        cin.ignore(); // To ignore the newline character left in the buffer
+        cin.clear();// Clear any error flags
+        cout<< "Please enter another food you like: ";
+        getline(cin, food);
+        cout << "Do you wish to continue (Y/N)? ";
+        cin >> resp;
+    }
+    cout << "You entered N. Thank you for sharing your food preferences!" << endl;
+    return 0;
+}

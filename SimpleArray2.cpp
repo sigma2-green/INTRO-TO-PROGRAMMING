@@ -27,5 +27,6 @@ int main(){
     }
    cout << "Maximum element in the array = " << max << endl;
    cout << "Minimum element in the array = " << min << endl;
+   cout << "Size of the array = " << sizeof(ten)<< endl;
    return 0;   
 }
